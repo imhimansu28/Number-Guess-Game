@@ -1,0 +1,8 @@
+[package]
+name = "guess-game"
+version = "0.1.1"
+edition = "2021"
+description = "A simple guessing game"
+
+[dependencies]
+rand = "0.8.5"
