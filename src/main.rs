@@ -14,9 +14,8 @@ fn main() {
     let mut guess_count: u32 = 0;
     let guess_limit: u32 = 10;
     let mut game_over = false;
-    println!("You have {} guesses left.", guess_limit - guess_count);
     loop {
-        println!("Please input your guess.");
+        println!("Please input your guess.\nYou have only {} guesses left.", guess_limit - guess_count);
 
         let mut guess = String::new();
 
@@ -33,9 +32,9 @@ fn main() {
             continue;
         }
 
-        if guess < secret_number {
+        if guess < magic_number {
             println!("Too small!");
-        } else if guess > secret_number {
+        } else if guess > magic_number {
             println!("Too big!");
         } else {
             println!("You win! {} is the secret number!", guess);
@@ -49,8 +48,8 @@ fn main() {
     }
 
     if game_over {
-        println!("Game over! You guessed {} times.\n and the secret number was {}", magic_number, secret_number);
+        println!("Game over! You guessed {} times.\n and the secret number was {}", guess_count, magic_number);
     }
-    println!("Thanks for playing!");
+    println!("Thanks for playing! Your score is: {}",);
 
 }
