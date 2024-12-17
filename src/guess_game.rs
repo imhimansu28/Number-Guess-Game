@@ -2,17 +2,12 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
-pub fn guess_game() {
+pub fn guess_game(player_name: String) {
     println!("Let's play guess the number!");
 
     let magic_number: u32 = rand::thread_rng().gen_range(1..=100);
 
-    let mut name = String::new();
-    println!("Please enter your name.");
-    io::stdin()
-        .read_line(&mut name)
-        .expect("Failed to read line");
-    println!("Hello, {}! Let's play guess the number!", name);
+    println!("Hello, {}! Let's play guess the number!", player_name);
 
     let mut guess_count: u32 = 0;
     let guess_limit: u32 = 10;
