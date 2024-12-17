@@ -1,6 +1,6 @@
-# Start Generation Here
+# Let's Play Some Games!
 
-## How to Run the Guess Game
+## How to Run the Games
 
 ### Prerequisites
 
@@ -26,13 +26,27 @@
    cargo run
    ```
 
-### How the Game Works
+### Available Games
 
-1. Upon running the application, you'll be prompted to enter your name.
+1. **Guess the Number**
+2. **Quiz**
+
+### How the Games Work
+
+#### Guess the Number
+
+1. Upon selecting the "Guess the Number" game, you'll be prompted to enter your name.
 2. The game will generate a random secret number between 1 and 100.
 3. You have 10 attempts to guess the secret number.
 4. After each guess, you'll receive feedback indicating whether your guess was too low or too high.
 5. If you guess the number within 10 attempts, you win! Otherwise, the game ends, revealing the secret number.
+
+#### Quiz
+
+1. Upon selecting the "Quiz" game, you'll be presented with a series of multiple-choice questions.
+2. Each question has four options; enter the number corresponding to your choice.
+3. After each answer, you'll receive feedback indicating whether your answer was correct.
+4. At the end of the quiz, your total score will be displayed, showing how many questions you answered correctly.
 
 ### Example
 
@@ -40,23 +54,7 @@
 $ cargo run
     Finished dev [unoptimized + debuginfo] target(s) in 0.50s
      Running `target/debug/guess_game`
-Let's play guess the number!
-Please enter your name.
-Alice
-Hello, Alice! Let's play guess the number!
-You have 10 guesses left.
-Please input your guess.
-50
-Too small!
-You have 9 guesses left.
-Please input your guess.
-75
-Too big!
-...
-```
-
-# End Generation Here
-
-```
-
+Please choose a game to play.
+1. Guess the Number
+2. Quiz
 ```
